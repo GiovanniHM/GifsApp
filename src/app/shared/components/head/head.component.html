@@ -1,1 +1,41 @@
-<p>head works!</p>
+
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar color="primary">
+      <span>Historial</span>
+      <span class="spacer"></span>
+      <button mat-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a routerLink="./listado" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>label</mat-icon>
+        <span>Listado de Héroes</span>
+      </a>
+      <a routerLink="./agregar" mat-list-item
+      (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>add</mat-icon>
+        <span>Añadir Héroe</span>
+      </a>
+      <a routerLink="./buscar" mat-list-item
+      (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>search</mat-icon>
+        <span>Busacar Héroe</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar>
+    <button mat-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Tracusa</span>
+
+    <!-- <span class="spacer"></span> -->
+    <app-search class="app-searchS"></app-search>
+   <span class="spacer"></span>
+  <mat-slide-toggle>Dark Mode</mat-slide-toggle>
+  </mat-toolbar>
+
+
+
+

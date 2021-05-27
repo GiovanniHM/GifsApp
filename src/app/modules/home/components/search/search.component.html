@@ -1,1 +1,23 @@
-<p>search works!</p>
+<form
+[formGroup]="searchFrom"
+id="demo-2"
+
+>
+  <input
+  type="search"
+  formControlName="searchIn"
+  placeholder="{{placeH}}"
+  title="Vorname, Name"
+  (click)="changePlaceH()"
+  />
+</form>
+
+<!-- <input
+  type="text"
+  placeholder="whatever you want"
+  onblur="if(this.value=='') this.value='Vorname, Name';"
+  onfocus="if(this.value=='Vorname, Name') this.value='';"
+  name="dynamic_0"
+  title="Vorname, Name"
+  value=""
+/> -->
