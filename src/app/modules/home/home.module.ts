@@ -8,6 +8,7 @@ import { AngularMaterialModule } from 'src/app/shared/module/angular-material/an
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 
@@ -24,18 +25,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
-
   ],
   imports: [
     CommonModule,
     AngularMaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
 
   ],
   exports: [
     SearchComponent,
-    PrincipalComponent
+    PrincipalComponent,
+
   ]
 })
 export class HomeModule { }

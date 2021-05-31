@@ -1,1 +1,21 @@
-<p>gifs works!</p>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let gif of resultados" class="">
+    <mat-card class="mat-elevation-z4">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ gif.title | uppercase }}</mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        [src]="gif.images.downsized_medium.url"
+        alt="{{ gif.title | uppercase }}"
+      />
+      <mat-card-actions>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+</div>
+

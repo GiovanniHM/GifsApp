@@ -11,6 +11,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 
 
 
@@ -31,7 +34,8 @@ import { MatInputModule } from '@angular/material/input';
     MatGridListModule,
     MatFormFieldModule,
     MatSlideToggleModule,
-    MatInputModule
+    MatInputModule,
+    FlexLayoutModule
   ]
 })
 export class AngularMaterialModule { }

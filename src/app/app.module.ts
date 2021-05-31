@@ -9,6 +9,9 @@ import { GifsComponent } from './modules/home/components/gifs/gifs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/home/home.module';
+import { AngularMaterialModule } from './shared/module/angular-material/angular-material.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +21,10 @@ import { HomeModule } from './modules/home/home.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HomeModule,
     SharedModule,
-    HomeModule
+    AngularMaterialModule,
+    HttpClientModule
 
   ],
   providers: [],

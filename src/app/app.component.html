@@ -1,9 +1,7 @@
 <mat-sidenav-container fullscreen>
-<app-head>
-</app-head>
-<div class="container">
-  <app-principal></app-principal>
-</div>
+  <app-head (gifsSearch)="dataSearh == $event"
+  ></app-head>
+  <div class="container">
+   <app-principal></app-principal>
+  </div>
 </mat-sidenav-container>
-
-

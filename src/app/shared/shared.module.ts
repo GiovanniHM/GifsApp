@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from './module/angular-material/angular-material.module';
 import { HeadComponent } from './components/head/head.component';
 import { HomeModule } from '../modules/home/home.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 
@@ -12,10 +15,13 @@ import { HomeModule } from '../modules/home/home.module';
   ],
   imports: [
     CommonModule,
+    HomeModule,
     AngularMaterialModule,
-    HomeModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports:[HeadComponent,
-    AngularMaterialModule]
+  exports:[
+    HeadComponent
+    ]
 })
 export class SharedModule { }

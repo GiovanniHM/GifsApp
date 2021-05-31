@@ -1,4 +1,3 @@
-
   <mat-sidenav #sidenav mode="push">
     <mat-toolbar color="primary">
       <span>Historial</span>
@@ -31,7 +30,19 @@
     <span>Tracusa</span>
 
     <!-- <span class="spacer"></span> -->
-    <app-search class="app-searchS"></app-search>
+    <form class="app-searchS"
+    [formGroup]="searchFrom"
+    id="demo-2"
+    >
+      <input
+      type="search"
+      formControlName="searchIn"
+      placeholder="{{placeH}}"
+      title="Vorname, Name"
+      (click)="changePlaceH()"
+      (keyup.enter)="gifSearch()"
+      />
+    </form>
    <span class="spacer"></span>
   <mat-slide-toggle>Dark Mode</mat-slide-toggle>
   </mat-toolbar>
