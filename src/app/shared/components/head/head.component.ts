@@ -15,6 +15,11 @@ export class HeadComponent implements OnInit {
   placeH: string = '';
   showFiller = false;
 
+
+  get history(){
+    return this.sg._historial;
+  }
+
   dataSearh: string;
 
   searchFrom: FormGroup = this.fb.group({
@@ -50,11 +55,13 @@ export class HeadComponent implements OnInit {
   console.log(this.gifsSearch)
   this.sg.searchValor = data;
   this.sg.buscarGifs(this.sg.searchValor);
-
-
-
-
   }
+
+  gifSearchHistory(gif: string){
+    this.sg.buscarGifs(gif);
+
+    }
+
 
 
 }
